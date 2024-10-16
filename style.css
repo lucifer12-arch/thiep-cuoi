@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'Updock';
+    src: url('font/Updock/Updock-Regular.ttf') format('truetype'); /* Path to your font file */
+}
+@font-face {
+    font-family: 'Cormorant';
+    src: url('font/Cormorant_SC/CormorantSC-Regular.ttf') format('truetype'); /* Path to your font file */
+}
+@font-face {
+    font-family: 'Gotu';
+    src: url('font/Gotu/Gotu-Regular.ttf') format('truetype'); /* Path to your font file */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable scroll snapping */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+section {
+    height: 100vh; /* Full viewport height */
+    scroll-snap-align: start; /* Snap to start of each section */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+#section1 {
+    background-color: #f1f1f1;
+}
+
+#section2 {
+    background-color: #fff;
+}
+
+#section3 {
+    background-color: #d1d1d1;
+}
+
+#section4 {
+    background-color: #c1c1c1;
+}
+
+#section5 {
+    background-color: #b1b1b1;
+}
+
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+.section-banner {
+    position: relative;
+    overflow: hidden;
+    font-family: title-font;
+}
+.banner-title {
+    font-size: 20px;
+    font-family: title-font;
+    margin-bottom: 40px;
+    margin-top: 5%
+}
+
+.banner-name {
+    font-family: 'Updock';
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.bg-right {
+    position: absolute;
+    top: 40%;
+    right: -50px;
+    max-width: 200px;
+}
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+canvas, img, svg, video {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+.bg-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bg-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: -120px;
+    /*max-width: 280px;*/
+}
+
+.banner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 24px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    /*max-width: var(--max-width);*/
+    margin: 0 auto;
+    /*padding: 0 20px;*/
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+[data-aos][data-aos][data-aos-duration="2000"], body[data-aos-duration="2000"] [data-aos] {
+    transition-duration: 2s;
+}
+
+[data-aos][data-aos][data-aos-easing=ease], body[data-aos-easing=ease] [data-aos] {
+    transition-timing-function: ease;
+}
+
+@media only screen and (min-width: 640px) {
+    .bg-bottom-left, .bg-top-right {
+        max-width: 60%;
+    }
+}
+.leaf-1 {
+    position: absolute;
+    max-width: 50px;
+    top: 20%;
+    left: 35%;
+}
+.leaf-2 {
+    position: absolute;
+    max-width: 80px;
+    bottom: 20%;
+    right: 15%;
+}
+
+.animate__animated.animate__fadeInBottomLeft, .animate__fadeInBottomRight, .animate__fadeInTopRight {
+    --animate-duration: 2s;
+}
+.address-name{
+    font-family: "Cormorant";
+    font-size: 35px;
+}
+.banner-time{
+    font-family: "Gotu";
+    font-size: 18px;
+}
+.banner-text{
+    font-family: "Gotu";
+    font-size: 18px;
+}
+
+/******** phan thu 2*********/
+
+.section-about {
+    position: relative;
+}
+
+/* ====== RESPONSIVE ======= */
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 640px) {
+    .main-about {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 40px;
+    }
+    .invitation {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .right-fixed i {
+        font-size: 24px;
+    }
+    .bg-bottom-left, .bg-top-right {
+        max-width: 60%;
+    }
+
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+
+    .album {
+        grid-template-columns: repeat(3,1fr);
+
+    }
+    .thankyou-title {
+        font-size: 44px;
+    }
+    .right-fixed {
+        right: 3vw;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .about-card {
+        grid-template-columns: repeat(2,40% 60%);
+        justify-items: center;
+    }
+    .about-data {
+        margin-left: 80px;
+        height: max-content;
+        width: 70%;
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    .about-card:nth-child(2){
+        grid-template-columns: repeat(2, 60% 40%);
+    }
+    .about-card:nth-child(2) .about-media {
+        order: 1;
+    }
+    .about-card:nth-child(2) .about-data {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: auto;
+        justify-content:left;
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+    .timeline-title {
+        font-size: 32px;
+    }
+
+    #countdown li span {
+        font-size:40px;
+    }
+    .name-des {
+        max-width: 70%;
+    }
+    .name .groom_name , .name .bride_name {
+        font-size: 86px;
+    }
+    .section-title {
+        font-size: 44px;
+    }
+
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+
+}
+
+.about-card {
+    display: grid;
+    row-gap: 24px;
+}
+.about-media {
+    border-radius: 999px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.3;
+}
+
+.about-media img {
+    transition: .5s;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-data {
+    display: grid;
+    row-gap: 16px;
+}
+
+.about-data .title {
+    font-family: var(--title-font);
+    font-size: 24px;
+    letter-spacing: 8px;
+}
+.about-data .bride_name, .about-data .groom_name {
+    font-family: var(--script-font);
+    font-size: 32px;
+    color: var(--primary-color);
+}

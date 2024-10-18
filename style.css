@@ -18,12 +18,12 @@
 }
 @font-face {
     font-family: title-font;
-    src: url(./font/DFVN\ Berfilem.otf);
+    src: url(./font/DFVN_Berfilem.otf);
 }
 
 @font-face {
     font-family: main-font;
-    src: url(./font/SVN-Gilroy\ Medium.otf);
+    src: url(./font/SVN-Gilroy_Medium.otf);
 }
 
 :root {
@@ -250,6 +250,71 @@ html {
 /* ------------------------------------------------------------------------- */
 
 /* ========= COMPONENT ========== */
+.container-fluid{
+    --bs-gutter-x:0;
+}
+.gift-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ .gift-image {
+     width: 10%; /* Kích thước mặc định trên màn hình lớn */
+     height: auto;
+ }
+/* Hình ảnh nhỏ hơn kế bên, bằng 1/5 kích thước */
+.small-image-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 110%; /* Điều chỉnh vị trí kế bên hình chính */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+}
+
+.small-image {
+    width: 20%; /* Nhỏ bằng 1/5 của hình chính (2 x 10%) */
+    height: auto;
+}
+
+.arrow-text {
+    position: relative;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Tạo mũi tên */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333; /* Màu của mũi tên */
+    margin: 0 auto;
+}
+/* Điều chỉnh kích thước hình ảnh cho màn hình có chiều rộng nhỏ hơn 768px (thường là máy tính bảng hoặc điện thoại) */
+@media screen and (max-width: 768px) {
+    .gift-image {
+        width: 30%;
+    }
+
+    .small-image {
+        width: 6%; /* Tương ứng 1/5 của 30% */
+    }
+
+    .small-image-wrapper {
+        left: 120%; /* Điều chỉnh khoảng cách trên mobile */
+    }
+}
+
+/* Điều chỉnh kích thước cho màn hình điện thoại nhỏ hơn 480px */
+@media screen and (max-width: 480px) {
+    .gift-image {
+        width: 50%; /* Tăng kích thước hơn nữa trên điện thoại nhỏ */
+    }
+}
+
 .heartbeat {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
@@ -537,8 +602,8 @@ body {
     margin-bottom: 40px;
 }
 .banner-name {
-    font-family: var(--script-font);
-    font-size: 44px;
+    font-family: 'title-font';
+    font-size: 54px;
     line-height: 1.5;
 }
 .banner-date {
@@ -608,7 +673,7 @@ body {
     letter-spacing: 8px;
 }
 .about-data .bride_name, .about-data .groom_name {
-    font-family: var(--script-font);
+    font-family: 'title-font';
     font-size: 32px;
     color: var(--primary-color);
 }

@@ -1,16 +1,16 @@
 @font-face {
     font-family: main-font;
-    src: url(../font/SVN-Gilroy\ Regular.otf);
+    src: url(../font/SVN-Gilroy_Regular.otf);
     font-weight: 400;
   }
   @font-face {
     font-family: main-font;
-    src: url(../font/SVN-Gilroy\ Medium.otf);
+    src: url(../font/SVN-Gilroy_Medium.otf);
     font-weight: 500;
   }
   @font-face {
     font-family: main-font;
-    src: url(../font/SVN-Gilroy\ Bold.otf);
+    src: url(../font/SVN-Gilroy_Bold.otf);
     font-weight: 700;
   }
   :root {

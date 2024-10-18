@@ -13,14 +13,7 @@
     src: url(../font/SVN-Gilroy_Bold.otf);
     font-weight: 700;
   }
-  :root {
-    --black : #181818 ;
-    --white: #fff;
-    --primary-color : #ec2178;
-    --light-primary: #f35399;
-    --secondary-color : #ec2145;
 
-  }
 
 
   * {
@@ -52,7 +45,7 @@ a {
 .btn-gradient {
     background-image: linear-gradient(
         to bottom right ,
-        var(--primary-color),
+        #587C4C,
         var(--secondary-color)
     );
     transition: all 0.4s linear;
@@ -77,10 +70,10 @@ a {
     color: var(--white);
 }
 .text-primary {
-  color: var(--primary-color);
+  color: #587C4C;
 }
 .text-gradient {
-    background: -webkit-linear-gradient(var(--primary-color), var(--secondary-color));
+    background: -webkit-linear-gradient(#587C4C, var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -89,7 +82,7 @@ a {
   background: 
   linear-gradient(
     to bottom right,
-    var(--primary-color), 
+    #587C4C,
     var(--secondary-color)
   )
 }
@@ -126,11 +119,11 @@ a {
 }
 
 .uk-checkbox:focus, .uk-input:focus, .uk-radio:focus, .uk-select:focus, .uk-textarea:focus{
-  border-color: var(--primary-color);
+  border-color: #587C4C;
 }
 .uk-tab>.uk-active>a {
-  color: var(--primary-color) !important;
-  border-color: var(--primary-color);
+  color: #587C4C !important;
+  border-color: #587C4C;
 }
 /* ANIMATION */
 .ping {

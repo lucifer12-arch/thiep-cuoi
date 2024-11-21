@@ -384,7 +384,34 @@
         window.history.scrollRestoration = 'manual'; // Prevent default scroll restoration
         window.scrollTo(0, 0); // Scroll to the top
     });
+    var audio = $("#audio")[0];
+    var playaudio = false;
 
+    // Sự kiện khi chạm vào màn hình
+    $(document).on("touchstart", function() {
+        if(!playaudio){
+            playaudio = true;
+            if (audio.paused) {
+                $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+                console.log("touchstart");
+                audio.play();
+            }
+        }
+
+    });
+
+    // Sự kiện khi lăn chuột
+    $(document).on("scroll", function() {
+        if(!playaudio){
+            playaudio = true;
+            if (audio.paused) {
+                console.log("scroll");
+                $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+                audio.play();
+            }
+        }
+
+    });
 
     const countdownDate = new Date('2024-12-22T07:00:00').getTime();
 

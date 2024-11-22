@@ -624,7 +624,7 @@ body {
 }
 .address-name {
     font-size: 24px;
-    font-family: var(--title-font);
+    font-family: var(--main-font);
     margin-top: 4px;
 }
 /* END BANNER */
